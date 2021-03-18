@@ -11,17 +11,17 @@ For further reference, please consider the following sections:
 
 ### Workshop #1 AGENDA
 
-- Use Expressions
-- Top-Level (Extension) Functions for Utility Functions
-- Named Arguments instead of Fluent Setter
-- `apply()` for Grouping Object Initialization
-- Do not Overload for Default Arguments
+- Use Expressions [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/UseExpressionsShould.kt)
+- Top-Level (Extension) Functions for Utility Functions [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/ExtensionFunctionsShould.kt)
+- Named Arguments instead of Fluent Setter [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/NamedArgumentsShould.kt)
+- `apply()` for Grouping Object Initialization [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/ObjectInitializationShould.kt)
+- Do not Overload for Default Arguments [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/OverloadDefaultArgumentsShould.kt)
 - Concisely Deal With Nullability
-    - Avoid `ìf-null` Checks
-    - Avoid `ìf-type` Checks
-    - Consider `let()`
-- Concise Mapping with Single Expression Functions
-- Ad-Hoc Creation of Structs
+    - Avoid `ìf-null` Checks [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/NullabilityCheckShould.kt)
+    - Avoid `ìf-type` Checks [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/InstanceCheckShould.kt)
+    - Consider `let()` [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/NullabilityCheckShould.kt)
+- Concise Mapping with Single Expression Functions [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/MappingObjectsShould.kt)
+- Ad-Hoc Creation of Structs [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/AdHocStructsCreationShould.kt)
 
 
 
