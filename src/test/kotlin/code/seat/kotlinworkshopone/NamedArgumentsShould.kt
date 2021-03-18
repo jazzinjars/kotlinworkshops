@@ -16,10 +16,23 @@ class NamedArgumentsShould {
     }
 
     @Test
-    internal fun `use named arguments on Kotlin instead`() {
+    internal fun `use named arguments on Kotlin data class instead`() {
         val bike = Bycicle2(discBrakes = true, model = "Emonda", type = "road", brand = "Trek")
+        val bikeWithoutDiscBrakes = Bycicle2( model = "Emonda", type = "road", brand = "Trek")
         assertThat(bike.brand).isEqualTo("Trek")
+        assertThat(bikeWithoutDiscBrakes.discBrakes).isFalse
     }
+
+    @Test
+    internal fun `use named arguments on Kotlin function instead`() {
+        val greetResp = greetMany("Hello", "Fernando", "Jaume", "Hector", "Víctor")
+
+        assertThat(greetResp)
+                .isEqualTo("Hello Fernando Jaume Hector Víctor and Welcome to the jungle")
+    }
+
+    private fun greetMany(many : String, vararg names : String, message : String = "Welcome to the jungle") =
+             "$many ${names.joinToString(" ")} and $message"
 }
 
 class Bicycle {
@@ -46,9 +59,9 @@ class Bicycle {
     }
 }
 
-class Bycicle2(
-    val brand: String,
-    val type: String,
-    val model: String,
+data class Bycicle2(
+    val brand: String? = null,
+    val type: String? = null,
+    val model: String? = null,
     val discBrakes: Boolean = false
 )
