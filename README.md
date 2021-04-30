@@ -8,6 +8,7 @@ For further reference, please consider the following sections:
 * [Create a RESTful web service with Spring Boot](https://kotlinlang.org/docs/jvm-spring-boot-restful.html#explore-the-spring-boot-application)
 * [Add DDBB to a Spring Boot RESTful web service](https://kotlinlang.org/docs/jvm-spring-boot-restful-db.html)
 * [Working with Kotlin and JPA](https://www.baeldung.com/kotlin/jpa)
+* [Spring Kotlin RealWorld Example App](https://github.com/gothinkster/kotlin-spring-realworld-example-app)
 
 ### Workshop #1 AGENDA
 
