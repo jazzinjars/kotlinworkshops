@@ -6,22 +6,28 @@ import org.junit.jupiter.api.Test
 class ExtensionFunctionsShould {
 
     @Test
-    internal fun `do not use static methods in util classes on Kotlin`() {
-        assertThat(StringUtil.countChars("seatCodeWorkshopKotlin", "o")).isEqualTo(4)
-    }
-
-    object StringUtil {
-        fun countChars(string: String, char: String): Int {
-            return string.length - string.replace("o", "").length
-        }
+    fun `slugfy the string when the extension functions is our and does not exist as instance method in String class`(){
+        assertThat("Hello Seat Code".slugify()).isEqualTo("hello-seat-code")
     }
 
     @Test
-    internal fun `use extension functions on Kotlin instead`() {
-        assertThat("seatCodeWorkshopKotlin".countChars("o")).isEqualTo(4)
+    fun `not be called because get(0) is a member function of String class`(){
+        assertThat("Hello Seat Code".get(0)).isEqualTo('H')
     }
 
-    fun String.countChars(char: String): Int {
-        return length - replace(char, "").length
+    @Test
+    fun `call our extension function BE CAREFUL`(){
+        assertThat("Hello Seat Code".toUpperCase())
+            .isNotEqualTo("HELLO SEAT CODE")
     }
+
+
 }
+
+fun String.slugify() = this.toLowerCase().replace(" ", "-")
+
+fun String.get(value : Int) = this
+
+fun String.toUpperCase() = toLowerCase()
+
+

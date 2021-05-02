@@ -10,13 +10,16 @@ class DefaultArgumentsShould {
         find("bike", false)
     }
 
-fun find(name: String) { find(name, true) }
-fun find(name: String, recursive: Boolean) {}
+    fun find(name: String) {
+        find(name, true)
+    }
+
+    fun find(name: String, recursive: Boolean) {}
 
     @Test
     internal fun `use named arguments on Kotlin instead`() {
         find2("bike")
     }
-}
 
-fun find2(name: String, recursive: Boolean = true) {}
+    fun find2(name: String, available: Boolean = true) {}
+}
