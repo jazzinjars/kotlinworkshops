@@ -25,20 +25,4 @@ class NullabilityCheckShould {
         assertThat(bike.brand.model.ref).isEqualTo("Trek - Emonda")
     }
 
-    @Test
-    internal fun `do not check nullability and call like this on Kotlin`() {
-        val bike: Bike? = findBike()
-        if (bike != null) {
-            rideBike(bike)
-        }
-    }
-
-    @Test
-    internal fun `use let on Kotlin instead`() {
-        findBike()?.let { rideBike(it) }
-    }
-
-    fun findBike(): Bike? { return bike }
-    fun rideBike(bike: Bike?) {}
-
 }

@@ -20,7 +20,7 @@ For further reference, please consider the following sections:
 - Concisely Deal With Nullability
     - Avoid `ìf-null` Checks [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/NullabilityCheckShould.kt)
     - Avoid `ìf-type` Checks [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/InstanceCheckShould.kt)
-    - Consider `let()` [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/NullabilityCheckShould.kt)
+- Scope Functions `let, run, with, apply, also` [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/ScopeFunctionShould.kt)
 - Concise Mapping with Single Expression Functions [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/MappingObjectsShould.kt)
 - Ad-Hoc Creation of Structs [(TestClass)](https://github.com/jazzinjars/kotlinworkshops/blob/master/src/test/kotlin/code/seat/kotlinworkshopone/AdHocStructsCreationShould.kt)
 

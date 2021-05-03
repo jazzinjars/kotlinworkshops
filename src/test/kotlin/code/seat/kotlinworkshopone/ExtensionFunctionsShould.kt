@@ -5,13 +5,18 @@ import org.junit.jupiter.api.Test
 
 class ExtensionFunctionsShould {
 
+
+
     @Test
     fun `slugfy the string when the extension functions is our and does not exist as instance method in String class`(){
+
+        String
+
         assertThat("Hello Seat Code".slugify()).isEqualTo("hello-seat-code")
     }
 
     @Test
-    fun `not be called because get(0) is a member function of String class`(){
+    fun `not be called our get because get(0) is a member function of String class`(){
         assertThat("Hello Seat Code".get(0)).isEqualTo('H')
     }
 
@@ -29,5 +34,16 @@ fun String.slugify() = this.toLowerCase().replace(" ", "-")
 fun String.get(value : Int) = this
 
 fun String.toUpperCase() = toLowerCase()
+
+
+
+
+
+
+
+
+
+
+
 
 
