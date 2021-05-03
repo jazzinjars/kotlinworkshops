@@ -11,7 +11,7 @@ class ExtensionFunctionsShould {
     }
 
     @Test
-    fun `not be called because get(0) is a member function of String class`(){
+    fun `not be called our get because get(0) is a member function of String class`(){
         assertThat("Hello Seat Code".get(0)).isEqualTo('H')
     }
 
