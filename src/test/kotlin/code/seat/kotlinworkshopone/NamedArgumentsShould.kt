@@ -24,6 +24,16 @@ class NamedArgumentsShould {
     }
 
     @Test
+    internal fun `creator functions or object mothers can be used for default parameters for test readability`() {
+        val t22 = createDefaultBycicle(
+            model = "T22"
+        )
+
+        assertThat(t22.model).isEqualTo("T22")
+        assertThat(t22.brand).isEqualTo("ORBEA")
+    }
+
+    @Test
     internal fun `use named arguments on Kotlin function instead`() {
         val greetResp = greetMany("Hello", "Fernando", "Jaume", "Hector", "Víctor")
 
@@ -64,4 +74,17 @@ data class Bycicle2(
     val type: String? = null,
     val model: String? = null,
     val discBrakes: Boolean = false
+)
+
+
+fun createDefaultBycicle(
+    brand: String? = "ORBEA",
+    type: String? = "mountain",
+    model: String? = "T25",
+    discBrakes: Boolean = false
+) = Bycicle2(
+    brand = brand,
+    type = type,
+    model = model,
+    discBrakes = discBrakes,
 )
