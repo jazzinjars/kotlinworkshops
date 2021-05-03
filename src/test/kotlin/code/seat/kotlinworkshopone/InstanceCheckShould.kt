@@ -1,36 +1,53 @@
 package code.seat.kotlinworkshopone
 
+import org.assertj.core.api.Assertions.assertThatThrownBy
 import org.junit.jupiter.api.Test
 
+/**
+ * https://kotlinlang.org/docs/typecasts.html
+ */
 class InstanceCheckShould {
 
     @Test
-    internal fun `do not check type instance on Kotlin`() {
-        // getBikeMechanic
+    internal fun `type checking`() {
+        assertThatThrownBy {
+            makeMechanicWork(PicaTeclas())
+        }.isInstanceOf(IllegalArgumentException::class.java)
     }
 
     @Test
-    internal fun `use as? and ? on Kotlin instead`() {
-        // getBikeMechanicKotlin
+    internal fun `type casting`() {
+        assertThatThrownBy {
+            makeMechanicWorkAlternative(PicaTeclas())
+        }.isInstanceOf(IllegalArgumentException::class.java)
     }
 }
 
-interface Employee
+interface Employee {
+    fun work()
+}
 class Mechanic : Employee {
-    fun getMechanic() {}
+    override fun work() {
+        println("works")
+    }
 }
 
-fun getBikeMechanic(employee: Employee) {
+class PicaTeclas : Employee {
+    override fun work() {
+        println("drinks coffe")
+    }
+}
+
+fun makeMechanicWork(employee: Employee) {
     if (employee !is Mechanic) {
         throw IllegalArgumentException("No Mechanic")
     }
-    employee.getMechanic()
+    employee.work()
 }
 
-fun getBikeMechanicKotlin(employee: Employee) {
+fun makeMechanicWorkAlternative(employee: Employee) {
     employee as? Mechanic ?: throw IllegalArgumentException("No Mechanic")
-    employee.getMechanic()
+    employee.work()
 }
-
 
 
