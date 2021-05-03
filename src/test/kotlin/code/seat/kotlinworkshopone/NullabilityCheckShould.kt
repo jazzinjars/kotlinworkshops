@@ -13,7 +13,7 @@ class NullabilityCheckShould {
 
     @Test
     internal fun `do not check nullability like this on Kotlin`() {
-        if (bike == null || bike.brand == null || bike.brand.model == null){
+        if (bike == null || bike.brand == null || bike.brand.model == null) {
             throw IllegalArgumentException("Invalid Bike")
         }
         assertThat(bike.brand.model.ref).isEqualTo("Trek - Emonda")
@@ -21,7 +21,7 @@ class NullabilityCheckShould {
 
     @Test
     internal fun `use null-safe call or elvis operator on Kotlin instead`() {
-        bike?.brand?.model?.ref ?: throw IllegalArgumentException("Invalid Bike")
+        bike.brand?.model?.ref ?: throw IllegalArgumentException("Invalid Bike")
         assertThat(bike.brand.model.ref).isEqualTo("Trek - Emonda")
     }
 
